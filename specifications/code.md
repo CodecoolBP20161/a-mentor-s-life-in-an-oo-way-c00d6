@@ -38,7 +38,7 @@ Returns a value for is_working based on the students knowledge, energy, and the 
 #### Arguments
 * ```student```
   * data_type: Student
-  * description: A class containing all the important attributes about a students.
+  * description: A class containing all the important attributes about a student.
 
 #### Return value
 * is_working
