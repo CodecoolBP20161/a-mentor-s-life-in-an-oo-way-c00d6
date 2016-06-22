@@ -1,6 +1,4 @@
 from person import Person
-from mentor import Mentor
-from code import Code
 
 
 class Student(Person):
@@ -24,4 +22,4 @@ class Student(Person):
             reader = csv.reader(csvfile)
             for row in reader:
                 student_list.append(row)
-        print(student_list)
+        return(student_list)
