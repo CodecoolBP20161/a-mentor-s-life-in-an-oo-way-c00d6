@@ -15,9 +15,9 @@ class Student(Person):
         mentor.teach(self)
 
     @classmethod
-    def create_by_csv():
+    def create_by_csv(file_name="students.csv"):
         student_list = []
-        path = os.path.abspath("./data/students.csv")
+        path = os.path.abspath("./data/%s" % file_name)
         with open(path, newline='') as csvfile:
             reader = csv.reader(csvfile)
             for row in reader:
