@@ -3,7 +3,7 @@ from person import Person
 
 class Student(Person):
     def __init__(self, knowledge_level, energy_level):
-        Person.__init__(self, *args, **kwargs)
+        super().__init__(self, *args, **kwargs)
         self.knowledge_level = knowledge_level
         self.energy_level = energy_level
 
