@@ -29,7 +29,7 @@ class CoffeeMachine():
     def check_if_working(self):
         self.is_working = True
         if not self.powered:
-            print("You gotta turn me on first bro")
+            print(" You gotta turn me on first bro")
             self.is_working = False
         elif not self.is_clean:
             print("I'm not gona make you anything as long as i'm this filthy")
@@ -41,3 +41,11 @@ class CoffeeMachine():
             print("You need coffee to make coffee bro")
             self.is_working = False
         return(self.is_working)
+
+        def make_coffee(self):
+            if self.is_working:
+                self.water_level -= 20
+                self.coffee_level -= 10
+            else:
+                print("Sorry but somthing's not right")
+            return(self.water_level, self.coffee_level)
