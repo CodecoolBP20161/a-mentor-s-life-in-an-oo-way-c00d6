@@ -97,3 +97,13 @@ Turns the machine on or off
 
 #### Return value
 ```is_working``` value
+
+### ```make_coffee```
+
+#### Arguments
+* ```self```
+  * data_type: integer
+  * description: if the machine is working reduces the water and coffee_level
+
+#### Return value
+```water_level, coffee_level``` value
