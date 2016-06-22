@@ -1,22 +1,19 @@
-# import datetime
 class Person:
 
     GENDER = ['male', 'female', 'notsure']
-    MOOD = ['sad', 'happy', 'desperate', 'lost', 'excited', 'dead', 'enthusiastic']
 
-    def __init__(self, first_name, last_name, year_of_birth, gender, stress, mood, coffeedrinker):
-        for item in [first_name, last_name, year_of_birth, gender, stress, mood, coffeedrinker]:
+    def __init__(self, first_name, last_name, year_of_birth, gender, stress, coffeedrinker):
+        for item in [first_name, last_name, year_of_birth, gender, stress, coffeedrinker]:
             if item == None or item == '':
                 raise ValueError('No %s value was given' % item)
         elif gender not in self.GENDER:
             raise ValueError('%s is not a valid gender.' % gender)
-        elif mood not in self.MOOD:
-            raise ValueError('%s is not a valid mood.' % mood)
 
         self.first_name = first_name
         self.last_name = last_name
-        self.year_of_birth = year_of_birth  # datetime.date(1993, 4, 20)
+        self.year_of_birth = year_of_birth
         self.gender = gender
+        self.stress = stress
         self.coffeedrinker = coffeedrinker
 
     def gender(gender):
