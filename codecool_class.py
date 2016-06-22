@@ -6,19 +6,19 @@ class CodecoolClass:
 
     def __init__(self, location, year, students=[], mentors=[], EKI_list=[]):
         self.location = location
-        self.year = year
+        self.year = int(year)
         self.students = students
         self.mentors = mentors
         self.EKI_list = EKI_list
     @classmethod
     def generate_local(cls):
-            Local_Object = CodecoolClass.__init__("Budapest", "2016")
+            Local_Object = CodecoolClass.__init__(cls, "Budapest", 2016)
 
             students_path = os.path.abspath("./data/students.csv")
             with open(students_path, newline='') as csvfile:
                 reader = csv.reader(csvfile)
                 for row in reader:
-                    instance = Student(row[0], row[1], int(row[2]), row[3], int(row[4]), int(row[5]), int(row[6]))
+                    instance = Student(row[0], row[1], int(row[2]), row[3], int(row[4]), int(row[5]), row[6])
                     cls.students.append(instance)
 
             mentors_path = os.path.abspath("./data/mentors.csv")
