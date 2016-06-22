@@ -43,10 +43,11 @@ class CoffeeMachine():
         return(self.is_working)
 
         def make_coffee(self):
+            is_working = self.check_if_working()
             if self.is_working:
                 self.water_level -= 20
                 self.coffee_level -= 10
                 print("Here is your caffee, drink it while it's hot!")
             else:
-                print("Sorry but somthing's not right")
+                print("--Evil Laughter--")
             return(self.water_level, self.coffee_level)
