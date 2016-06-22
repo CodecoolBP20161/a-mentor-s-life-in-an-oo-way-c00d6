@@ -26,11 +26,19 @@ class Mentor(Person):
         return student_list
 
     def check_mood(self, student_list):
+        MOOD = {'sad', 'happy', 'desperate', 'lost', 'excited', 'dead', 'enthusiastic'}
+        mood = 0
         sum_mood = 0
         student_num = 0
         for student in student_list:
+            mood = (student.energy_level + student.knowledge_level) - student.stress)
             sum_mood += student.mood
-        if sum_mood/len(student_list) < 40:
-            for student in student_list:
-                student.mood = 100
+        average_mood = (sum_mood/len(student_list))
+        if average_mood > 150:
+            print ("the class mood is excellent, you are so amazing! I want to spend my life with you!!!!!!")
+        if avererage_mood >50 and average_mood < 150:
+            print ("I can see, that class mood is ok.")
+        if  average_mood < 50:
+            print ("come on, do something. You should drink a coffee or go to a meetup.")
+            print(" Ask Csibi to smile, eat gyros, do yoga! You have so many possibilities!")
         return student_list
