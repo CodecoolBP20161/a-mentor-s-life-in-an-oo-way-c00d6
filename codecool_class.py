@@ -25,7 +25,7 @@ class CodecoolClass:
             with open(mentors_path, newline='') as csvfile:
                 reader = csv.reader(csvfile)
                 for row in reader:
-                    instance = Student(row[0], row[1], int(row[2]), row[3], int(row[4]), int(row[5]), int(row[6]))
+                    instance = Mentor(row[0], row[1], int(row[2]), row[3], int(row[4]), int(row[5]), int(row[6]))
                     cls.mentors.append(instance)
 
             EKI_path = os.path.abspath("./data/eki.csv")
