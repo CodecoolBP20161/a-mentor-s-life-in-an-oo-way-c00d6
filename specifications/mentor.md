@@ -37,14 +37,14 @@ None
 Change the ```student``` 's knowledge and energy level.
 
 #### Arguments
-* ```teaching_level```
-  * data_type: int
-  * modify the change of knowledge and energy level. Higher number makes higher change in knowledge and smaller in energy level
+* ```student```
+  * data_type: Student
+  * description: the student who the mentor teaches
 
 
 #### Return value
 
-* ```d_knowledge``` and ```d_energy```
+* ```student```
 
 ### ```check_energy_level```
 
