@@ -12,8 +12,8 @@ class Mentor(Person):
         if student.knowledge_level > 100:
             student_knowledge_level = 100
         student.energy_level -= 3 / self.teaching_level
-        if student.energy_level > 100:
-            student_energy_level = 100
+        if student.energy_level < 0:
+            student_energy_level = 0
         print ("I explain it now. Is it ok?")
         return student
 
@@ -34,4 +34,3 @@ class Mentor(Person):
             for student in student_list:
                 student.mood = 100
         return student_list
-            
