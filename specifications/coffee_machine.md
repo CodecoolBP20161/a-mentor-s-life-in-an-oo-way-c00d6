@@ -1,4 +1,4 @@
-# Coffee_machine
+# CoffeeMachine
 
 ## Description
 This class represents the Coffee machine in the office.
@@ -52,7 +52,7 @@ None
 Turns the machine on or off
 
 #### Arguments
-* ```self, powered```
+* ```self```
 
 
 #### Return value
@@ -61,7 +61,7 @@ Turns the machine on or off
 ### ```get_cleaned```
 
 #### Arguments
-* ```self, is_clean```
+* ```self```
   * data_type: boolean
   * description: someone cleans the machine
 
@@ -71,7 +71,7 @@ Turns the machine on or off
 ### ```get_filled_coffee```
 
 #### Arguments
-* ```self, coffee_level```
+* ```self```
   * data_type: integer
   * description: raises the coffee_level
 
@@ -81,17 +81,17 @@ Turns the machine on or off
 ### ```get_filled_water```
 
 #### Arguments
-* ```self, water_level```
+* ```self```
   * data_type: integer
   * description: raises the water_level
 
 #### Return value
 ```water_level``` value
 
-### ```check_conditions```
+### ```check_if_working```
 
 #### Arguments
-* ```self, ```
+* ```self ```
   * data_type: boolean
   * description: checks whether the working conditions are true
 
