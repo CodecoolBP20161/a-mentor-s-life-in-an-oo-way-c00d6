@@ -6,7 +6,7 @@ class Person:
         for item in [first_name, last_name, year_of_birth, gender, stress, coffeedrinker]:
             if item == None or item == '':
                 raise ValueError('No %s value was given' % item)
-        elif gender not in self.GENDER:
+        if gender not in self.GENDER:
             raise ValueError('%s is not a valid gender.' % gender)
 
         self.first_name = first_name
@@ -15,12 +15,6 @@ class Person:
         self.gender = gender
         self.stress = stress
         self.coffeedrinker = coffeedrinker
-
-    def gender(gender):
-        if gender in self.GENDER:
-            print('That is a valid value for gender')
-        else:
-            raise ValueError('That is not a valid value for gender')
 
     @properties
     def full_name(self):
