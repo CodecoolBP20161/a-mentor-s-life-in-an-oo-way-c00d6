@@ -47,6 +47,6 @@ class CodecoolClass:
 
     def find_mentor_by_full_name(self, full_name):
         for mentor in self.mentors:
-            if full_name.replace(" ", "").lowercase() ==  student.replace(" ", "").lowercase()
+            if full_name.replace(" ", "").lowercase() ==  student.replace(" ", "").lowercase():
                 return mentor
         raise NameError("No luck, Dude, %s is ain't no teachin' in here!!!" % (full_name))

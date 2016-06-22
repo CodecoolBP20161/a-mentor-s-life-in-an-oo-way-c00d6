@@ -20,7 +20,8 @@ class Code:
             if skill > difficulty:
                 print("Awesome, %s, the B0SS succesfully completed the %s assignment!" % (student.name, self.name))
                 is_working = True
-                return is_working, try_count
+                return is_working
             else:
                 try_count += 1
                 print("Try again,man! That wasn't even close for %s, to make the %s assignment!" % (student.name, self.name))
+        student.ask_for_help()

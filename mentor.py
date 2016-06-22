@@ -31,7 +31,7 @@ class Mentor(Person):
         sum_mood = 0
         student_num = 0
         for student in student_list:
-            mood = (student.energy_level + student.knowledge_level) - student.stress)
+            mood = student.energy_level + student.knowledge_level - student.stress
             sum_mood += mood
         average_mood = (sum_mood/len(student_list))
         if average_mood > 150:
