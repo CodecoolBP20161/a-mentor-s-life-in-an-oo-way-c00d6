@@ -26,7 +26,7 @@ class Mentor(Person):
         return student_list
 
     def check_mood(self, student_list):
-        MOOD = {'sad', 'happy', 'desperate', 'lost', 'excited', 'dead', 'enthusiastic'}
+        #MOOD = {'sad', 'happy', 'desperate', 'lost', 'excited', 'dead', 'enthusiastic'}
         mood = 0
         sum_mood = 0
         student_num = 0
