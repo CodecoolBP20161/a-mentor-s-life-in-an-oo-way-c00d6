@@ -2,10 +2,11 @@ from codecool_class import CodecoolClass
 from mentor import Mentor
 from student import Student
 
-codecool_bp = CodecoolClass.generate_local()
 
-print (codecool_bp)
-print (mentor_list) #mentorok and you
+codecool_bp = CodecoolClass.generate_local()
+print(codecool_bp.mentors[1].full_name)
+print ('Location: ', codecool_bp.location, 'Year: ', codecool_bp.year, 'Mentors: ', codecool_bp.mentors[i].full_name for i in range(len(codecool_bp.mentors)))
+#print (Mentor.create_by_csv()) #mentorok and you
 input ()
 print ("Mentors arrives at school. They welcome students with cheery smile")
 mentor_list[1].check_energy_level(student_list)
