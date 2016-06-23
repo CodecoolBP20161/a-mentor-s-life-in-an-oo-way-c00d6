@@ -1,5 +1,5 @@
 from person import Person
-from student import Student.
+from student import Student
 
 
 class Mentor(Person):
