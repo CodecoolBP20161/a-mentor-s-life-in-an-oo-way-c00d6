@@ -52,11 +52,11 @@ class CodecoolClass:
                     local_object.EKI_list.append(instance)
 
                     #test
-                    test = [local_object.students, local_object.mentors, local_object.EKI_list]
-                    for test_subject in test:
-                        print("List: %s" % (test_subject))
-                        for i in test_subject:
-                            print(" Object name: %s. Object type: %s." % (i, type(i)))
+                    #test = [local_object.students, local_object.mentors, local_object.EKI_list]
+                    #for test_subject in test:
+                        #print("List: %s" % (test_subject))
+                        #for i in test_subject:
+                            #print(" Object name: %s. Object type: %s." % (i, type(i)))
 
             return local_object
 
