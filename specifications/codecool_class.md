@@ -32,7 +32,7 @@ None
 
 #### Return value
 
-```CodecoolClass``` object
+``CodecoolClass``` object
 
 ## Instance methods
 

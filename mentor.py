@@ -1,5 +1,5 @@
 from person import Person
-from student import Student
+from student import Student.
 
 
 class Mentor(Person):
@@ -7,6 +7,17 @@ class Mentor(Person):
     def __init__(self, nickname, teaching_level):
         self.nickname = nickname
         self.teaching_level = teaching_level
+
+
+    @classmethod
+    def create_by_csv(file_name="mentors.csv"):
+        student_list = []
+        path = os.path.abspath("./data/%s" % file_name)
+        with open(path, newline='') as csvfile:
+            reader = csv.reader(csvfile)
+            for row in reader:
+                mentors_list.append(row)
+        return(mentors_list)
 
     def teach(self, student):
         student.knowledge_level += 3 * self.teaching_level
