@@ -52,7 +52,7 @@ class CodecoolClass:
                     local_object.EKI_list.append(instance)
 
                     #test
-                    test = [students, mentors, EKI_list]
+                    test = [local_object.students, local_object.mentors, local_object.EKI_list]
                     for test_subject in test:
                         print("List: %s" % (test_subject))
                         for i in test_subject:
