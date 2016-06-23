@@ -34,12 +34,17 @@ class Mentor(Person):
     def check_energy_level(self, student_list):
         for student in student_list:
             if student.energy_level < 50:
+                print ("%s realize that %s's energy level is critically low." % (self.nickname, student.first_name))
+                input ()
                 print('%s says:' % self.nickname)
                 print('Dont worry, %s!  Be happy!' % student.first_name)
+                input ()
                 student.energy_level = 100
+                print ("\n%s's energy_level is %i now, thanks for %s" % (student.first_name, student.energy_level, self.nickname))
         return student_list
 
     def check_mood(self, student_list):
+        print ("Today, it's %s's job to take care of the mood od the class.\n" % self.nickname)
         mood = 0
         sum_mood = 0
         student_num = 0
@@ -47,6 +52,9 @@ class Mentor(Person):
             mood = student.energy_level + student.knowledge_level - student.stress
             sum_mood += mood
         average_mood = (sum_mood/len(student_list))
+        print ("according to his calculations, the avarage mood of the class is %i" % average_mood)
+        input()
+        print ("%s says:" % self.nickname)
         if average_mood > 150:
             print("The class mood is excellent, you are so amazing! I want to spend my life with you!!!!!!")
         if average_mood > 50 and average_mood < 150:

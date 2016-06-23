@@ -4,11 +4,15 @@ from person import Person
 class Student(Person):
     def __init__(self, knowledge_level, energy_level, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.knowledge_level = knowledge_level
-        self.energy_level = energy_level
+        self.knowledge_level = int(knowledge_level)
+        self.energy_level = int(energy_level)
 
     def use_EKI(self, eki):
-        print("-----IDE ÍRNI VALAMIT-----")
+        if (eki.d_energy + eki.d_knowledge) > 0:
+            print ("%s decided to use %s to raise his mood." % (self.first_name, eki.name))
+        else:
+            print ("something terrible happend: %s" % eki.name)
+        input()
         eki.influence(self)
 
     def ask_for_help(self, mentor):

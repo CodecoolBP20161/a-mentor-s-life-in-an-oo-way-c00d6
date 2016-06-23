@@ -25,7 +25,7 @@ class CodecoolClass:
 
     @classmethod
     def generate_local(cls):
-            print("Generating local CodecoolClass...")
+            print("***Generating local CodecoolClass...*** \n")
             local_object = CodecoolClass("Budapest", 2016)
             #  print("Class Location: %s" % (cls.location))
             #  print("Year: %d" % ())
