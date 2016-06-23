@@ -1,4 +1,5 @@
 class CoffeeMachine():
+
     def __init__(self, is_working, coffee_level, water_level, is_clean, powered):
         self.is_working = is_working
         self.coffee_level = coffee_level

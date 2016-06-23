@@ -9,14 +9,14 @@ class Student(Person):
 
     def use_EKI(self, eki):
         if (eki.d_energy + eki.d_knowledge) > 0:
-            print ("%s decided to use %s to raise his mood." % (self.first_name, eki.name))
+            print("%s decided to use %s to raise his mood." % (self.first_name, eki.name))
         else:
-            print ("something terrible happend: %s" % eki.name)
+            print("Something terrible happend: %s" % eki.name)
         input()
         eki.influence(self)
 
     def ask_for_help(self, mentor, code="problem"):
-        print ("%s needs help to find the problem. Without %s's help, he can't be succesfull." % (self.first_name, mentor.nickname))
+        print("%s needs help to find the problem. Without %s's help, he can't be succesfull." % (self.first_name, mentor.nickname))
         input()
         mentor.teach(self, code)
 

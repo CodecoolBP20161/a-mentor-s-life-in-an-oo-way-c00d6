@@ -10,7 +10,6 @@ class Management(Person):
 
     def change_life(self, mentors=CodecoolClass.mentors, students=CodecoolClass.students):
         if self.name == "Boda Józsi":
-            
             print('Boda Józsi has arrived!')
             for student, mentor in students, mentors:
                 student.energy_level = 100

@@ -5,7 +5,6 @@ import csv
 import os
 
 
-
 class CodecoolClass:
 
     def __init__(self, location, year, students=None, mentors=None, EKI_list=None):
@@ -21,7 +20,7 @@ class CodecoolClass:
         self.students = students
         self.mentors = mentors
         self.EKI_list = EKI_list
-        #print("Típusa: loc: %s, year: %s, stud: %s, ment: %s" % (type(location), type(year), type(students), type(mentors) ))
+        # print("Típusa: loc: %s, year: %s, stud: %s, ment: %s" % (type(location), type(year), type(students), type(mentors) ))
 
     @classmethod
     def generate_local(cls):
@@ -35,7 +34,6 @@ class CodecoolClass:
                 for row in reader:
                     instance = Student(int(row[6]), int(row[7]), row[0], row[1], int(row[2]), row[3], int(row[4]), row[5])
                     local_object.students.append(instance)
-
 
             mentors_path = os.path.abspath("./data/mentors.csv")
             with open(mentors_path, newline='') as csvfile:
@@ -51,12 +49,12 @@ class CodecoolClass:
                     instance = Eki(row[0], int(row[1]), row[2])
                     local_object.EKI_list.append(instance)
 
-                    #test
-                    #test = [local_object.students, local_object.mentors, local_object.EKI_list]
-                    #for test_subject in test:
-                        #print("List: %s" % (test_subject))
-                        #for i in test_subject:
-                            #print(" Object name: %s. Object type: %s." % (i, type(i)))
+                    # test
+                    # test = [local_object.students, local_object.mentors, local_object.EKI_list]
+                    # for test_subject in test:
+                        # print("List: %s" % (test_subject))
+                        # for i in test_subject:
+                            # print(" Object name: %s. Object type: %s." % (i, type(i)))
 
             return local_object
 
