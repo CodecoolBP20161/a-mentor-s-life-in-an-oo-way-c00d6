@@ -15,8 +15,10 @@ class Student(Person):
         input()
         eki.influence(self)
 
-    def ask_for_help(self, mentor):
-        mentor.teach(self)
+    def ask_for_help(self, mentor, code="problem"):
+        print ("%s needs help to find the problem. Without %s's help, he can't be succesfull." % (self.first_name, mentor.nickname))
+        input()
+        mentor.teach(self, code)
 
     @classmethod
     def create_by_csv(file_name="students.csv"):

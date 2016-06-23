@@ -21,14 +21,20 @@ class Mentor(Person):
                 mentor_list.append(row)
         return(mentor_list)
 
-    def teach(self, student):
+    def teach(self, student, code):
+        print ("%s says:" % student.first_name)
+        print ("%s, could you explain it please?" % self.nickname)
+        input()
+        print ("As a perfect mentor, %s can explain amazingly, how to solve the %s" % (self.nickname, code))
+        input()
         student.knowledge_level += 3 * self.teaching_level
         if student.knowledge_level > 100:
             student_knowledge_level = 100
         student.energy_level -= 3 / self.teaching_level
         if student.energy_level < 0:
             student_energy_level = 0
-        print("I explain it now. Is it ok?")
+        print ("By the assignement, %s's new mood:" % student.first_name)
+        print ("energy_level: %i, knowledge_level: %i" % (student.energy_level, student.knowledge_level))
         return student
 
     def check_energy_level(self, student_list):
