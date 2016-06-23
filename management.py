@@ -8,7 +8,7 @@ class Management(Person):
     def _init_(self, name):
         self.name = name
 
-    def boda_jozsi(self, mentors = CodecoolClass.mentors, students = CodecoolClass.students):
+    def boda_jozsi(self, mentors=CodecoolClass.mentors, students=CodecoolClass.students):
         print('Boda Józsi has arrived!')
         for student, mentor in students, mentors:
             student.energy_level = 100
@@ -17,7 +17,7 @@ class Management(Person):
             mentors.stress = 0
             mentors.teaching_level = 100
 
-    def creepy_guy(self, mentors = CodecoolClass.mentors, students = CodecoolClass.students):
+    def creepy_guy(self, mentors=CodecoolClass.mentors, students=CodecoolClass.students):
         for student, mentor in students, mentors:
             student.stress += 20
             mentors.stress += 30
