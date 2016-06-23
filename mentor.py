@@ -49,7 +49,7 @@ class Mentor(Person):
         average_mood = (sum_mood/len(student_list))
         if average_mood > 150:
             print("The class mood is excellent, you are so amazing! I want to spend my life with you!!!!!!")
-        if avererage_mood > 50 and average_mood < 150:
+        if average_mood > 50 and average_mood < 150:
             print("I can see, that class mood is ok.")
         if average_mood < 50:
             print("Come on, do something. You should drink a coffee or go to a meetup.")

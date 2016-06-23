@@ -12,7 +12,7 @@ for i in range(len(codecool_bp.mentors)):
 #print (Mentor.create_by_csv()) #mentorok and you
 #input("")
 print ("Mentors arrives at school. They welcome students with cheery smile")
-mentor_list[1].check_energy_level(student_list)
+codecool_bp.mentors[1].check_energy_level(codecool_bp.students)
 input()
-mentor_list[0].check_mood(student_list) #stresszt beállítani kb 80ra, k_l 0-ra, hogy rossz legyen a mood
+codecool_bp.mentors[0].check_mood(codecool_bp.students) #stresszt beállítani kb 80ra, k_l 0-ra, hogy rossz legyen a mood
 input()
