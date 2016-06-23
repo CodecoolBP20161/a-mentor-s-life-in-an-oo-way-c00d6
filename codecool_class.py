@@ -19,8 +19,10 @@ class CodecoolClass:
 
     @classmethod
     def generate_local(cls):
-            Local_Object = CodecoolClass.__init__(cls, "Budapest", 2016)
-
+            print("Generating local CodecoolClass...")
+            local_object = CodecoolClass.__init__(cls, "Budapest", 2016)
+            #  print("Class Location: %s" % (cls.location))
+            #  print("Year: %d" % ())
             students_path = os.path.abspath("./data/students.csv")
             with open(students_path, newline='') as csvfile:
                 reader = csv.reader(csvfile)
@@ -43,17 +45,14 @@ class CodecoolClass:
                     cls.EKI_list.append(instance)
             return Local_Object
 
-
-
-
     def find_student_by_full_name(self, full_name):
         for student in self.students:
-            if full_name.replace(" ", "").lowercase() ==  student.full_name.replace(" ", "").lowercase():
+            if full_name.replace(" ", "").lowercase() == student.full_name.replace(" ", "").lowercase():
                 return student
         raise NameError("Sorry man, this %s Fella is not in this class..." % (full_name))
 
     def find_mentor_by_full_name(self, full_name):
         for mentor in self.mentors:
-            if full_name.replace(" ", "").lowercase() ==  student.replace(" ", "").lowercase():
+            if full_name.replace(" ", "").lowercase() == student.replace(" ", "").lowercase():
                 return mentor
         raise NameError("No luck, Dude, %s is ain't no teachin' in here!!!" % (full_name))
