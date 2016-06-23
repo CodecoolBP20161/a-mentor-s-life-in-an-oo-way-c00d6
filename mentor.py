@@ -4,7 +4,8 @@ from student import Student
 
 class Mentor(Person):
 
-    def __init__(self, nickname, teaching_level):
+    def __init__(self, nickname, teaching_level, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.nickname = nickname
         self.teaching_level = teaching_level
 

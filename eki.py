@@ -3,7 +3,7 @@ from student import Student
 
 class Eki:
 
-    def __init__(self, d_energy, d_knowledge, name):
+    def __init__(self, name, d_energy, d_knowledge):
         self.d_energy = d_energy
         self.d_knowledge = d_knowledge
         self.name = name
