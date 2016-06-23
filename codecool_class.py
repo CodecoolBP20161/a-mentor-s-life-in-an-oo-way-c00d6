@@ -2,14 +2,21 @@ from mentor import Mentor
 from student import Student
 import csv
 import os
+
+
 class CodecoolClass:
 
-    def __init__(self, location, year, students=[], mentors=[], EKI_list=[]):
+    def __init__(self, location, year, students=None, mentors=None, EKI_list=None):
+        check = [students, mentors, EKI_list]
+        for _list in check:
+            if _list is None:
+                _list = []
         self.location = location
         self.year = int(year)
         self.students = students
         self.mentors = mentors
         self.EKI_list = EKI_list
+
     @classmethod
     def generate_local(cls):
             Local_Object = CodecoolClass.__init__(cls, "Budapest", 2016)
