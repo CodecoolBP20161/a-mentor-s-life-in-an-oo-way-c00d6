@@ -8,7 +8,7 @@ class Student(Person):
         self.energy_level = energy_level
 
     def use_EKI(self, eki):
-        print("%s energy and knowledge level under the frog's ass, that's why %s uses an EKI" % (self.name, self.name))
+        print("-----IDE ÍRNI VALAMIT-----")
         eki.influence(self)
 
     def ask_for_help(self, mentor):

@@ -1,6 +1,7 @@
 from codecool_class import CodecoolClass
 from mentor import Mentor
 from student import Student
+from code import Code
 
 
 codecool_bp = CodecoolClass.generate_local()
@@ -15,4 +16,6 @@ print ("Mentors arrives at school. They welcome students with cheery smile")
 codecool_bp.mentors[1].check_energy_level(codecool_bp.students)
 input()
 codecool_bp.mentors[0].check_mood(codecool_bp.students) #stresszt beállítani kb 80ra, k_l 0-ra, hogy rossz legyen a mood
+input()
+codecool_bp.students[1].use_EKI(codecool_bp.EKI_list[14])
 input()

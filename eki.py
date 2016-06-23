@@ -9,12 +9,12 @@ class Eki:
         self.name = name
 
     def influence(self, student):
-        student.knowledge_level += self.d_knowledge
+        student.knowledge_level += int(self.d_knowledge)
         if student.knowledge_level > 100:
             student_knowledge_level = 100
         if student.knowledge_level < 0:
             student_knowledge_level = 0
-        student.energy_level += self.d_energy
+        student.energy_level += int(self.d_energy)
         if student.energy_level > 100:
             student_energy_level = 100
         if student.energy_level < 0:
