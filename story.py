@@ -8,9 +8,11 @@ from coffee_machine import CoffeeMachine
 codecool_bp = CodecoolClass.generate_local()
 #studenteket felsorolni, canvas szerint megcsinálni
 print('Location: ', codecool_bp.location, '\nYear: ', codecool_bp.year, )
+input()
 print('\nMentors: ')
 for i in range(len(codecool_bp.mentors)):
     print('  ', codecool_bp.mentors[i].full_name)
+input()
 print('\nStudents:')
 for i in range(len(codecool_bp.students)):
     print('  ', codecool_bp.students[i].full_name)
