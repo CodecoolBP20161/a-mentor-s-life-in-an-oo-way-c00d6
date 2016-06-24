@@ -27,14 +27,14 @@ class Mentor(Person):
         input()
         print("As a perfect mentor, %s can explain amazingly, how to solve the %s" % (self.nickname, code))
         input()
-        student.knowledge_level += 3 * self.teaching_level
+        new_knowledge_level = student.knowledge_level + 3 * self.teaching_level
         if student.knowledge_level > 100:
             student_knowledge_level = 100
-        student.energy_level -= 3 / self.teaching_level
+        new_energy_level = student.energy_level - 3 / self.teaching_level
         if student.energy_level < 0:
             student_energy_level = 0
-        print("By the assignement, %s's new mood:" % student.first_name)
-        print("energy_level: %i, knowledge_level: %i" % (student.energy_level, student.knowledge_level))
+        print("With %s's help, %s could improve his skills:" % (self.nickname, student.first_name))
+        print("energy level from %i to %i, knowledge level from %i to %i" % (student.energy_level, new_energy_level, student.knowledge_level, new_knowledge_level))
         return student
 
     def check_energy_level(self, student_list):
