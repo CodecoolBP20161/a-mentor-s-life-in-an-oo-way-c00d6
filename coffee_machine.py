@@ -1,7 +1,6 @@
 class CoffeeMachine():
 
-    def __init__(self, is_working, coffee_level, water_level, is_clean, powered):
-        self.is_working = is_working
+    def __init__(self, coffee_level, water_level, is_clean, powered):
         self.coffee_level = coffee_level
         self.water_level = water_level
         self.is_clean = is_clean
@@ -28,13 +27,13 @@ class CoffeeMachine():
         return(self.water_level)
 
     def check_if_working(self):
-        self.is_working = True
+        is_working = True
         if not self.powered:
             print(" You gotta turn me on first bro")
-            self.is_working = False
+            is_working = False
         elif not self.is_clean:
             print("I'm not gona make you anything as long as i'm this filthy")
-            self.is_working = False
+            is_working = False
         elif self.water_level == 0:
             print("Let's trade! Gimme some water and i'll give you coffe")
             self.is_working = False
