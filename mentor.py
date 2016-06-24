@@ -46,7 +46,7 @@ class Mentor(Person):
                 print('Dont worry, %s!  Be happy!' % student.first_name)
                 input()
                 student.energy_level = 100
-                print("\n%s's energy_level is %i now, thanks for %s" % (student.first_name, student.energy_level, self.nickname))
+                print("\n%s's energy level is %i now, thanks for %s" % (student.first_name, student.energy_level, self.nickname))
         return student_list
 
     def check_mood(self, student_list):
