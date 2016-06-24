@@ -24,6 +24,7 @@ class CoffeeMachine():
 
     def get_filled_water(self):
         self.water_level = 100
+        print("Luckily Csibi, not beeing an addickt, can handel the situation and fills the machine with water")
         return(self.water_level)
 
     def check_if_working(self):
@@ -32,22 +33,23 @@ class CoffeeMachine():
             print(" You gotta turn me on first bro")
             is_working = False
         elif not self.is_clean:
-            print("I'm not gona make you anything as long as i'm this filthy")
+            print("please clean the unit")
             is_working = False
         elif self.water_level == 0:
-            print("Let's trade! Gimme some water and i'll give you coffe")
-            self.is_working = False
+            print("The machine is out of water")
+            is_working = False
         elif self.coffee_level == 0:
-            print("You need coffee to make coffee bro")
-            self.is_working = False
-        return(self.is_working)
+            print("The machine is out of coffee")
+            is_working = False
+        return(is_working)
 
-        def make_coffee(self):
-            is_working = self.check_if_working()
-            if self.is_working:
-                self.water_level -= 20
-                self.coffee_level -= 10
-                print("Here is your caffee, drink it while it's hot!")
-            else:
-                print("--Evil Laughter--")
-            return(self.water_level, self.coffee_level)
+    def make_coffee(self):
+        print ("Dani tryes to make his latte")
+        is_working = self.check_if_working()
+        if is_working:
+            self.water_level -= 20
+            self.coffee_level -= 10
+            print("Dani finaly gets his coffee")
+        else:
+            print("As he realizes that he won't get his caffee, he panics and starts to cry")
+        return(self.water_level, self.coffee_level)

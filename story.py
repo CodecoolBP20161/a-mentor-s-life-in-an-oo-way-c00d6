@@ -2,6 +2,7 @@ from codecool_class import CodecoolClass
 from mentor import Mentor
 from student import Student
 from code import Code
+from coffee_machine import CoffeeMachine
 
 
 codecool_bp = CodecoolClass.generate_local()
@@ -27,8 +28,12 @@ code.get_worked_on(codecool_bp.students[1])
 input()
 codecool_bp.students[3].use_EKI(codecool_bp.EKI_list[10])
 input()
-cofeemachine = CoffeeMachine(70, 0, True, True)
+coffeemachine = CoffeeMachine(70, 0, True, True)
+coffeemachine.make_coffee()
 input()
+coffeemachine.get_filled_water()
+input()
+coffeemachine.make_coffee()
 boda = Management("Boda Józsi")
 boda.change_life()
 input()
